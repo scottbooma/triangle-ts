@@ -101,4 +101,35 @@ describe("Triangle", () => {
       expect(triangle.isScalene).toBe(true);
     });
   });
+  describe("degenerate triangle", () => {
+    it("is a complete degenerate", () => {
+      const triangle = new Triangle(1, 1, 2);
+      expect(triangle.isDegenerate).toBe(true);
+    });
+
+    it("is a piece of shit", () => {
+      const triangle = new Triangle(5, 10, 5);
+      expect(triangle.isDegenerate).toBe(true);
+    });
+
+    it("doesn't even have a job", () => {
+      const triangle = new Triangle(3, 3, 6);
+      expect(triangle.isDegenerate).toBe(true);
+    });
+
+    it("steals money from its parents", () => {
+      const triangle = new Triangle(0.2, 0.4, 0.2);
+      expect(triangle.isDegenerate).toBe(true);
+    });
+
+    it("is a perverted mess", () => {
+      const triangle = new Triangle(1, 2, 3);
+      expect(triangle.isDegenerate).toBe(false);
+    });
+
+    it("can't have 0 length sides", () => {
+      const triangle = new Triangle(0, 0, 0);
+      expect(triangle.isDegenerate).toBe(false);
+    });
+  });
 });

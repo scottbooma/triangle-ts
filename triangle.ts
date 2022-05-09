@@ -33,4 +33,17 @@ export class Triangle {
       this.sideThree + this.sideTwo >= this.sideOne
     );
   }
+  get isDegenerate() {
+    return (
+      (this.sideOne === this.sideTwo &&
+        this.sideOne + this.sideTwo === this.sideThree &&
+        this.sideThree != 0) ||
+      (this.sideOne === this.sideThree &&
+        this.sideOne + this.sideThree === this.sideTwo &&
+        this.sideTwo != 0) ||
+      (this.sideThree === this.sideTwo &&
+        this.sideThree + this.sideTwo === this.sideOne &&
+        this.sideOne != 0)
+    );
+  }
 }
