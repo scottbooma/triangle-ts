@@ -75,7 +75,7 @@ describe("Triangle", () => {
     });
   });
 
-  describe.skip("scalene triangle", () => {
+  describe("scalene triangle", () => {
     it("no sides are equal", () => {
       const triangle = new Triangle(5, 4, 6);
       expect(triangle.isScalene).toBe(true);

@@ -24,4 +24,13 @@ export class Triangle {
         this.sideThree + this.sideTwo >= this.sideOne)
     );
   }
+  get isScalene() {
+    return (
+      this.sideOne != this.sideTwo &&
+      this.sideOne != this.sideThree &&
+      this.sideOne + this.sideTwo >= this.sideThree &&
+      this.sideOne + this.sideThree >= this.sideTwo &&
+      this.sideThree + this.sideTwo >= this.sideOne
+    );
+  }
 }
