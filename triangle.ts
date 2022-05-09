@@ -14,4 +14,14 @@ export class Triangle {
       this.sideOne != 0
     );
   }
+  get isIsosceles() {
+    return (
+      (this.sideOne === this.sideTwo &&
+        this.sideOne + this.sideTwo >= this.sideThree) ||
+      (this.sideOne === this.sideThree &&
+        this.sideOne + this.sideThree >= this.sideTwo) ||
+      (this.sideThree === this.sideTwo &&
+        this.sideThree + this.sideTwo >= this.sideOne)
+    );
+  }
 }
